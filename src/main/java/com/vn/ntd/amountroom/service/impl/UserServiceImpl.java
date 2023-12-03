@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-  private UserRepo userRepo;
+  private final UserRepo userRepo;
 
   @Override
   public UserDetails loadUserByUsername(String username) {
