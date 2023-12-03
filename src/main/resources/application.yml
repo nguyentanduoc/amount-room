@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/amount-room
+    username: postgres
+    password: 123456a
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/liquibase-changeLog.xml
+application:
+  security:
+    jwt:
+      secret-key: (tTz}lb+.WKfNt]V}S-X>!v3I:Uykquo3"'k^SXCBa|_RyG~35-r/'RLzAVxMd<
+      expiration: 60
+      refresh-token.expiration: 120
